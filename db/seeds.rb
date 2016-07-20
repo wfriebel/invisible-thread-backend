@@ -6,7 +6,7 @@ end
 
 
 500.times do
-  Post.create(title: Faker::Commerce.product_name, resource_type: Faker::Color.color_name, description: Faker::Lorem.paragraph, link: Faker::Internet.url, actor_id: rand(100))
+  Post.create(title: Faker::Commerce.product_name, resource_type: Faker::Commerce.color, description: Faker::Lorem.paragraph, link: Faker::Internet.url, actor_id: rand(100))
 end
 
 actors = Array (1..100)
