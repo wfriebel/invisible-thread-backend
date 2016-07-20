@@ -16,6 +16,8 @@ gem 'shotgun'
 
 gem "paperclip", "~> 4.1.1"
 
+gem 'bcrypt'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
