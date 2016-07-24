@@ -16,30 +16,19 @@ post '/users' do
   end
 
 # Sign up
+# I am broken :'(
 get '/users/new' do
-  @user = User.new
-  erb :'/users/new'
+  "Hello World"
+  # @user = User.new
+  # erb :'/users/new'
 end
 
 end
 
 get '/users/:id' do
   @user = User.find(params[:id])
-  # "This is an actor's home page"
   erb :'users/show'
 end
-
-
-# Log in
-get '/sessions/new' do
-end
-
-post '/sessions' do
-end
-
-# Log out
-# delete '/sessions/:id' do
-# end
 
 
 

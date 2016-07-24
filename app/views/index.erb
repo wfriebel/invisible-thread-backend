@@ -1,13 +1,12 @@
 <!-- login route -->
 <!-- logic exists to only show log in if not logged in / if session does not exist -->
-<br>
-<a href="/login">Log In</a><br><br>
+
+<% @posts.each do |post| %>
+  <%= post.title %><br>
+  <%= post.resource_type %><br>
+  <%= post.description %><br>
+  <%= post.link %><br><br><br>
+<% end %>
 
 
-<!-- logout link -->
-<!-- logic exists to only show logout if logged in -->
-<a href="/logout">Logout</a><br><br>
-
-
-<!-- register link -->
-<a href="/users/new">Register</a>
+<!-- Eventually be able to sort by post date, votes, and resource type -->
