@@ -1,4 +1,4 @@
-class Actor < ActiveRecord::Base
+class User < ActiveRecord::Base
   include BCrypt
 
   has_many :posts
