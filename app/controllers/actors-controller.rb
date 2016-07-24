@@ -1,15 +1,17 @@
-get '/actors' do
+get '/users' do
   "This is an actor's home page"
 end
 
 
 # Sign up
-get '/actors/new' do
+get '/users/new' do
+  @user = Actor.new
+  erb :'/users/new'
 end
 
-post '/actors' do
+post '/users' do
   # create a new actor and save to the database
-  redirect '/actors'
+  redirect '/users'
 end
 
 # Log in

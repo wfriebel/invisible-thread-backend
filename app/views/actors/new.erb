@@ -1,0 +1,11 @@
+<h1>Register as a new User</h1>
+
+<form id="new_user_form" action='/users' method="post">
+  <br>
+  <input type="text" name="user[first_name]" placeholder="First Name" value="<%= @user.first_name %>"><br><br>
+  <input type="text" name="user[last_name]" placeholder="Last Name" value="<%= @user.last_name %>"><br><br>
+  <input type="email" name="user[email]" placeholder="Email Address" value="<%= @user.email %>"><br><br>
+  <input type="password" name="user[password]" placeholder="Password"><br><br>
+  <input type="button" value="Submit">
+
+</form>
