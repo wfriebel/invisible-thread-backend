@@ -5,7 +5,7 @@ end
 
 # Sign up
 get '/users/new' do
-  @user = Actor.new
+  @user = User.new
   erb :'/users/new'
 end
 

@@ -1,12 +1,12 @@
 require 'faker'
 
 100.times do
-  Actor.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password_digest: BCrypt::Password.create("password"), url: Faker::Internet.url)
+  User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password_digest: BCrypt::Password.create("password"), url: Faker::Internet.url)
 end
 
 
 500.times do
-  Post.create(title: Faker::Commerce.product_name, resource_type: Faker::Commerce.color, description: Faker::Lorem.paragraph, link: Faker::Internet.url, actor_id: rand(100))
+  Post.create(title: Faker::Commerce.product_name, resource_type: Faker::Commerce.color, description: Faker::Lorem.paragraph, link: Faker::Internet.url, user_id: rand(100))
 end
 
 actors = Array (1..100)
