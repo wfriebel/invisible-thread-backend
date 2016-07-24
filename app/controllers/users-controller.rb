@@ -1,11 +1,7 @@
 get '/users' do
-  "This shows all the users"
-end
-
-# Sign up
-get '/users/new' do
-  @user = User.new
-  erb :'/users/new'
+  redirect '/login' unless session[:user_id]
+  @users = User.all
+  erb :'users/index'
 end
 
 post '/users' do
@@ -18,11 +14,19 @@ post '/users' do
     @errors = user.errors.full_messages
     erb :'/users/new'
   end
+
+# Sign up
+get '/users/new' do
+  @user = User.new
+  erb :'/users/new'
+end
+
 end
 
 get '/users/:id' do
   @user = User.find(params[:id])
-  "This is an actor's home page"
+  # "This is an actor's home page"
+  erb :'users/show'
 end
 
 
@@ -34,8 +38,8 @@ post '/sessions' do
 end
 
 # Log out
-delete '/sessions/:id' do
-end
+# delete '/sessions/:id' do
+# end
 
 
 
