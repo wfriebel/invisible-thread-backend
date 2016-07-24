@@ -1,10 +1,13 @@
-<h1>Actor's Resource</h1>
+<!-- login route -->
+<!-- logic exists to only show log in if not logged in / if session does not exist -->
+<br>
+<a href="/login">Log In</a><br><br>
 
-<!-- Login form on page -->
-<form action="/users/" method="post">
-  <legend>Log In</legend>
-  <input type="email" id="email" name="email" placeholder="Enter your email here" required />
-  <input type="password" id="pwd" name="pwd" placeholder="Enter your password here">
-  <input type="submit" name="Submit">
-</form>
-<!-- or a link to register -->
+
+<!-- logout link -->
+<!-- logic exists to only show logout if logged in -->
+<a href="/logout">Log Out</a><br><br>
+
+
+<!-- register link -->
+<a href="/users/new">Register</a>
