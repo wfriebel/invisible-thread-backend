@@ -1,24 +1,7 @@
 $(document).ready(function() {
-  $('#login-link').on('click', function(event) {
-    event.preventDefault();
-    $.ajax( {
-        url: '/login',
-        method: "GET"
-    }).done(function(response) {
-        console.log(response)
-      $('#login-li').append(response);
-      $('#login-link').hide();
-    })
-  });
-  $('#new-post-link').on('click', function(event) {
-      event.preventDefault();
-      $.ajax( {
-          url: '/posts/new',
-          method: "GET"
-      }).done(function(response) {
-          console.log(response);
-          $('#new-post-area').append(response);
-          $('#new-post-link').hide();
-      })
-  });
+  // This is called after the document has loaded in its entirety
+  // This guarantees that any elements we bind to will exist on the page
+  // when we try to bind to them
+
+  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
 });
