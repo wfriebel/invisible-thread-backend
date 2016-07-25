@@ -24,15 +24,3 @@ get '/logout' do
   session.delete(:user_id)
   redirect '/'
 end
-
- # Log in
-# get '/sessions/new' do
-# end
-
-# post '/sessions' do
-# end
-
-# Log out
-# delete '/sessions/:id' do
-# end
-

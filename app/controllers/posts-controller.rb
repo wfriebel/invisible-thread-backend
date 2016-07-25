@@ -3,6 +3,7 @@ get '/posts' do
   erb :index
 end
 
+# Should only be able to add a new post if a logged in user
 get '/posts/new' do
   erb :'posts/new'
 end
