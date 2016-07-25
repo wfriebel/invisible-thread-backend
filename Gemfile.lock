@@ -16,6 +16,7 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.0)
     backports (3.6.4)
+    bcrypt (3.1.11)
     builder (3.2.2)
     capybara (2.4.4)
       mime-types (>= 1.16)
@@ -23,6 +24,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     diff-lcs (1.2.5)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
@@ -36,6 +41,11 @@ GEM
     multi_json (1.10.1)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    paperclip (4.1.1)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     pg (0.18.1)
     rack (1.6.0)
     rack-protection (1.5.3)
@@ -82,16 +92,21 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord (~> 4.1)
-  activesupport (~> 4.1)
+  activerecord (~> 4.2.0)
+  activesupport (~> 4.2.0)
+  bcrypt
   capybara
   factory_girl
   faker
+  paperclip (~> 4.1.1)
   pg
   rack-test
   rake
-  rspec
+  rspec (~> 3.0)
   shotgun
   shoulda-matchers
   sinatra
   sinatra-contrib
+
+BUNDLED WITH
+   1.12.5

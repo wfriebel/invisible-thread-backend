@@ -1,0 +1,12 @@
+<h1>This is my <%= @user.first_name %>'s Home Page</h1>
+
+<!-- Allow the user to create a new post -->
+<p id="new-post-area"><a id="new-post-link" href="/posts/new">Add a new post</a></p>
+
+<!-- show all my posts-->
+<div id="all-posts-div">
+  <% @user.posts.each do |post| %>
+    <h4 id="post-title"><a href= "<%= post.link %>"><%= post.title %></a></h4>
+    <p id="post-description"><%= post.description %></p>
+  <% end %>
+</div>

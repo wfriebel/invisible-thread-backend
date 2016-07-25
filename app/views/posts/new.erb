@@ -1,0 +1,13 @@
+<!-- New resource on user's profile page -->
+
+<form id="new-post-form" action='/posts' method="post">
+  <input type="text" name="post[title]" placeholder="Resource Title"><br>
+  <textarea rows="4" cols="50" name="post[description]" placeholder="Post description"></textarea><br>
+  <!-- <select>
+    <option value="agents">Agents</option>
+    <option value="auditions">Auditions</option>
+    <option value="monologues">Monologues</option>
+  </select> -->
+  <input type="text" name="post[link]" placeholder="http://mylink.com"><br>
+  <input type="submit" value="Add Resource">
+</form>
