@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 
+  <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
     See: http://necolas.github.com/normalize.css/
@@ -18,6 +18,22 @@
   <title></title>
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <!-- Log in link -->
+      <% if !session[:user_id] %>
+        <li id="login-li"><a id="login-link" href="/login">Log In</a></li>
+         <!-- register link -->
+        <li><a id="register-link" href='/users/new'>Register</a></li>
+      <% else %>
+        <!-- logout link -->
+        <!-- logic exists to only show logout if logged in -->
+        <li><a href="/logout">Logout</a></li>
+      <% end %>
+
+  </nav>
+
   <%= yield %>
 </body>
 </html>
