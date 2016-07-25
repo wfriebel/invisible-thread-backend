@@ -14,20 +14,18 @@ post '/users' do
     @errors = user.errors.full_messages
     erb :'/users/new'
   end
-
-# Sign up
-# I am broken :'(
-get '/users/new' do
-  "Hello World"
-  # @user = User.new
-  # erb :'/users/new'
 end
 
+# Sign up
+get '/users/new' do
+  "Hello World"
+  @user = User.new
+  erb :'/users/new'
 end
 
 get '/users/:id' do
   @user = User.find(params[:id])
-  erb :'users/show'
+  erb :'/users/show'
 end
 
 

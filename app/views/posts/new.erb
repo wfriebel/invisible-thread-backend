@@ -1,5 +1,11 @@
 <h1>Add a New Resource Here!</h1>
 
 <form id="new-post-form" action='/posts' method="post">
-  This is my form
+  <input type="text" name="post[title]" placeholder="Resource Title">
+  <select>
+    <option value="agents">Agents</option>
+    <option value="auditions">Auditions</option>
+    <option value="monologues">Monologues</option>
+  </select>
+
 </form>
