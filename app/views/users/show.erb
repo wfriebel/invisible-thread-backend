@@ -1,3 +1,10 @@
-"This is my user homepage / show page"
+<h1>This is my <%= @user.first_name %>'s' Home Page</h1>
 
-<%= @user.email %>
+<!-- Allow the user to create a new post -->
+<p></p>
+
+<!-- show all my posts-->
+<% @user.posts.each do |post| %>
+  <h4 id="post-title"><a href= "<%= post.link %>"><%= post.title %></a></h4>
+  <p id="post-description"><%= post.description %></p>
+<% end %>

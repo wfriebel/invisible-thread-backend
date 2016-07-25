@@ -3,7 +3,11 @@ get '/session-viewer' do
 end
 
 get '/login' do
-  erb :'sessions/login'
+  if request.xhr?
+    erb :'/sessions/login', layout: false
+  else
+    erb :'/sessions/login'
+  end
 end
 
 post '/login' do

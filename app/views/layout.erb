@@ -23,7 +23,7 @@
       <li><a href="/">Home</a></li>
       <!-- Log in link -->
       <% if !session[:user_id] %>
-        <li><a href="/login">Log In</a></li>
+        <li id="login-li"><a id="login-link" href="/login">Log In</a></li>
          <!-- register link -->
         <li><a href="/users/new">Register</a></li>
       <% else %>
