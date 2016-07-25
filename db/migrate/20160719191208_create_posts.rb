@@ -5,7 +5,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :resource_type
       t.string :description
       t.string :link
-      t.integer :user_id
+      t.integer :user_id, null: false
 
       t.timestamps(null: false)
     end
