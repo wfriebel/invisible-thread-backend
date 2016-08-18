@@ -6,5 +6,6 @@ get '/users' do
 end
 
 post '/users' do
+	puts "Hello"
 	erb :register
 end
