@@ -7,6 +7,6 @@ end
 
 post '/users' do
 	@user = User.create(name: params[:name], password: params[:password])
+	@users = User.where('updated_at >= ?', Time.now - 60)
 	@user.to_json
-
 end
