@@ -6,6 +6,7 @@ get '/users' do
 end
 
 post '/users' do
-	puts "Hello"
-	erb :register
+	@user = User.create(name: params[:name])
+	content_type: json
+	{name: @user.name}.to_json
 end
