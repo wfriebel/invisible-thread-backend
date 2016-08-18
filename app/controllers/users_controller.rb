@@ -15,5 +15,6 @@ put '/users' do
 	@user = User.find_by(name: params[:name])
 	@user.latitude = params[:latitude]
 	@user.longitude = params[:longitude]
+	@user.name = "name_changed"
 	@user.save
 end
