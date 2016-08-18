@@ -10,3 +10,10 @@ post '/users' do
 	# @users = User.where('updated_at >= ?', Time.now - 60)
 	@user.to_json
 end
+
+put '/users' do
+	@user = User.find_by(name: params[:name])
+	@user.latitude = params[:latitude]
+	@user.longitude = params[:longitude]
+	@user.save
+end
