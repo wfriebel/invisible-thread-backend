@@ -8,5 +8,5 @@ end
 post '/users' do
 	@user = User.create(name: params[:name])
 	content_type: json
-	{name: @user.name}.to_json
+	{name: params[:name]}.to_json
 end
