@@ -6,9 +6,7 @@ get '/users' do
 end
 
 post '/users' do
-	@user = User.create(name: params[:name])
-	"Hello #{@user.name}"
+	@user = User.create(name: params[:name], password: params[:password])
 	@user.to_json
-	# content_type :json
-	# {name: "Bob"}.to_json
+
 end
